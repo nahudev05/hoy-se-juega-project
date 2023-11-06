@@ -17,11 +17,11 @@ body {
 
 .container-search {
     background-color: #fff;
-    max-width: 655px;
-    max-height: 425px;
+    max-width: 655px; 
     border-radius: 20px;
     overflow: hidden;
     margin: auto;
+    padding: 10px;
 }
 
 .main-h1 {
@@ -29,11 +29,26 @@ body {
     color: #efb810;
     text-align: center;
     border-bottom: 5px solid #efb810;
-    width: 655px;
+    width: 655px; 
     padding: 10px;
     margin: 0 auto;
     margin-bottom: 20px;
 }
+
+@media (max-width: 576px) {
+    .container-search {
+        max-width: 100%;
+    } 
+ 
+    .main-h1 {
+        max-width: 100%;
+        font-size: 24px;
+    }
+
+    .main-h2 {
+        font-size: 18px;
+    }
+ }
 
 .main-h2 {
     color: rgba(0, 0, 0, 0.46);
@@ -42,7 +57,18 @@ body {
 
 .scrollable-list {
     margin: auto;
-    max-width: 585px;
-    max-height: 310px;
+    max-width: 100%; 
+    max-height: 310px; 
     overflow-y: auto;
+}
+
+.info {
+    text-decoration: none;
+    color: #000;
+    border: 1px solid #efb810;
+    border-radius: 5px;
+    padding: 5px;
+    width: 90%;
+    margin-bottom: 10px;
+    margin: 10px auto 0;
 }

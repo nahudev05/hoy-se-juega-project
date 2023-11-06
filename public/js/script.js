@@ -6,7 +6,7 @@ function traerDatos() {
         }
     })
     .then(response => {
-        if(!response.ok){
+        if (!response.ok) {
             throw new Error('No se pudo obtener los datos');
         }
         return response.json();
@@ -21,11 +21,28 @@ function traerDatos() {
 
 function mostrarDatos(data) {
     var lista = document.getElementById('lista');
-    lista.innerHTML = '';
+    
+    if (lista) {
+        lista.innerHTML = '';
 
-    data.forEach(item => {
-        var li = document.createElement('li');
-        li.textContent = item.attributes.nombre;
-        lista.appendChild(li);
-    });
+        data.forEach(item => {
+            var a = document.createElement('a');
+            a.href = '../templates/info_cancha.html';
+            a.classList.add('info');
+            a.textContent = item.attributes.nombre;
+            a.setAttribute('data-id', item.id);
+
+            a.addEventListener('click', (event) => {
+                const id = a.getAttribute('data-id');
+                localStorage.setItem('id', id);
+                console.log('ID del elemento clicado:', id);
+
+                traerDatosEspecifico(id);
+            });
+
+            lista.appendChild(a);
+        });
+    }
 }
+
+traerDatos();
