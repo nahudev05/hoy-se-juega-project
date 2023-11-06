@@ -35,9 +35,6 @@ function mostrarDatos(data) {
             a.addEventListener('click', (event) => {
                 const id = a.getAttribute('data-id');
                 localStorage.setItem('id', id);
-                console.log('ID del elemento clicado:', id);
-
-                traerDatosEspecifico(id);
             });
 
             lista.appendChild(a);
