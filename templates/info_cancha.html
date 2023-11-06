@@ -3,13 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/css/style.css">
     <title>Document</title>
 </head>
 <body>
-    <div id="info-container">
-
+    <div class="preloader">
+        <div class="spinner-container">
+            <div class="spinner"></div>
+        </div>
+            <p class="carga">Cargando los datos</p>
     </div>
 
+        <h1 class="titulo">Hoy se Juega</h1>
+    <div class="container-info">
+        <div class="card" id="info-container"></div>
+        <div class="card"></div>
+    </div>
+    <div class="imagen">
+        <img src="../public/img/botin.png" alt="" class="img-botin">
+    </div>
+
+    <script src="../public/js/carga.js"></script>
     <script src="../public/js/info_especifico.js"></script>
 </body>
 </html>
