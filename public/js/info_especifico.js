@@ -31,14 +31,16 @@ function mostrarDatosEspecifico(data) {
             var h1 = document.createElement('h1');
             var direccion = document.createElement('p');
             var telefono = document.createElement('p');
+            var br = document.createElement('br');
             h1.classList.add('titulo-cancha');
             direccion.classList.add('p-cancha');
             telefono.classList.add('p-cancha');
             h1.textContent = item.attributes.nombre;
-            direccion.textContent = item.attributes.direccion;
-            telefono.textContent = item.attributes.telefono;
+            direccion.textContent = 'Direccion: ' + item.attributes.direccion;
+            telefono.textContent = 'Telefono: ' + item.attributes.telefono;
             infoContainer.appendChild(h1);
             infoContainer.appendChild(direccion);
+            infoContainer.appendChild(br);
             infoContainer.appendChild(telefono);
 
 

@@ -27,7 +27,7 @@ function mostrarDatos(data) {
 
         data.forEach(item => {
             var a = document.createElement('a');
-            a.href = '../templates/info_cancha.html';
+            a.href = 'templates/info_cancha.html';
             a.classList.add('info');
             a.textContent = item.attributes.nombre;
             a.setAttribute('data-id', item.id);
