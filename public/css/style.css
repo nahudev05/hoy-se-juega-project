@@ -167,10 +167,36 @@ body {
 
 /*Responsive*/
 
-@media screen and (max-width: 768px) {
+@media (max-width: 1366px) {
+
+	.titulo {
+		font-size: 50px;
+		
+	}
+
+	.card, #map {
+		width: 400px;
+		height: 400px;
+	}
+
+	.imagen {
+		padding: 16px;
+	}
+
+	.img-botin {
+		width: 70px;
+		height: 70px;
+	}
+}
+
+@media (max-width: 768px) {
 	.titulo {
 		font-size: 36px;
 		margin: 30px 0 20px;
+	}
+
+	.main-h1 {
+		width: 100%;
 	}
 
 	.titulo-cancha {
@@ -236,7 +262,7 @@ body {
 	}
 }
 
-@media screen and (max-width: 480px) {
+@media (max-width: 480px) {
 	.titulo {
 		font-size: 24px;
 		margin: 30px 0 20px;
