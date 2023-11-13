@@ -34,7 +34,7 @@ function mostrarDatos(data) {
 
             a.addEventListener('click', (event) => {
                 const id = a.getAttribute('data-id');
-                localStorage.setItem('id', id);
+                sessionStorage.setItem('id', id);
             });
 
             lista.appendChild(a);

@@ -1,4 +1,4 @@
-const id = localStorage.getItem('id');
+const id = sessionStorage.getItem('id');
 
 function traerDatosEspecifico(id) {
     fetch(`http://localhost:1337/api/canchas?filters[id][$eq]=${id}`, {
